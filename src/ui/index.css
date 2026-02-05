@@ -1,0 +1,548 @@
+/* Custom styles for the Swiper */
+.garden-card {
+	box-shadow:
+		0 4px 6px -1px rgba(0, 0, 0, 0.1),
+		0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+	border-radius: 1.5rem !important;
+	overflow: hidden !important;
+	height: 100% !important;
+	transition: transform 0.2s ease-in-out;
+	width: 95%;
+}
+
+/* .garden-card:hover {
+	transform: translateY(-5px);
+} */
+
+.garden-image {
+	transition: transform 0.3s ease;
+	width: 100%;
+	height: 350px;
+	object-fit: cover;
+}
+
+.garden-card:hover .garden-image {
+	transform: scale(1.05);
+}
+
+.swiper-container {
+	width: 100%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+/* Styling for each slide */
+.swiper-slide {
+	background-position: center;
+	background-size: cover;
+	width: 100%; /* Increase width of the card */
+	height: 300px; /* Increase height of the card */
+	transition:
+		transform 0.3s ease,
+		filter 0.3s ease,
+		opacity 0.3s ease;
+	display: flex;
+	justify-content: center;
+}
+
+/* Centered active card */
+.swiper-slide.my-slide-active .garden-card {
+	width: 120% !important; /* Make the center card even larger */
+	height: 500px; /* Increase height for the center card */
+	opacity: 1;
+	filter: none;
+	transform: scale(1.2); /* Slightly zoom in */
+	z-index: 2;
+	box-shadow:
+		0 12px 24px rgba(0, 0, 0, 0.2),
+		0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Non-active (left/right) cards */
+.swiper-slide:not(.my-slide-active) {
+	opacity: 0.7;
+	filter: blur(1px);
+	transform: scale(0.9);
+}
+
+/* Container styles to allow overflow */
+.full-width-container {
+	overflow: visible;
+	padding: 50px 0;
+}
+
+.swiper-container-wrapper {
+	position: relative;
+	overflow: visible;
+}
+
+.full-width-swiper {
+	overflow: visible !important;
+}
+
+.carousel-container {
+	width: 100%;
+	overflow-x: auto;
+	padding: 1rem 1.5rem;
+	box-sizing: border-box;
+}
+
+.carousel-track {
+	display: flex;
+	gap: 1rem;
+}
+
+.carousel-image {
+	flex: 0 0 auto;
+	width: 264px;
+	height: 270px;
+	object-fit: cover;
+	border-radius: 12px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	transition: transform 0.3s ease;
+}
+
+.carousel-image:hover {
+	transform: scale(1.03);
+}
+
+.carousel-wrapper {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem 0;
+	margin: auto;
+	width: calc((200px * 4) + (1rem * 3)); /* 4 cards and 3 gaps */
+}
+
+.carousel-container {
+	overflow-x: auto;
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+	width: 100%;
+
+	/* Hide scrollbar */
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* IE 10+ */
+}
+
+.carousel-container::-webkit-scrollbar {
+	display: none; /* Chrome, Safari, Opera */
+}
+
+.carousel-track {
+	display: flex;
+	gap: 1rem;
+	padding: 1rem 0;
+	justify-content: center;
+}
+
+.carousel-image {
+	width: 264px;
+	height: 270px;
+	object-fit: cover;
+	border-radius: 12px;
+	flex-shrink: 0;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-btn {
+	background-color: #004626;
+	color: white;
+	font-size: 1.5rem;
+	border: none;
+	border-radius: 50%;
+	width: 36px;
+	height: 36px;
+	cursor: pointer;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.carousel-btn.left {
+	margin-right: 8px;
+}
+
+.carousel-btn.right {
+	margin-left: 8px;
+}
+
+.social-icons-container {
+	display: flex;
+	gap: 0.5rem; /* spacing between icons */
+}
+
+.social-icon {
+	width: 50px;
+	height: 50px;
+	border-radius: 20%;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.social-icon i {
+	color: white;
+	font-size: 20px;
+}
+
+.actions-row {
+	border-left: 2px solid #004626;
+	margin: 20px 20px;
+}
+
+.sheet-header-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.icon-and-text {
+	display: flex;
+	align-items: center;
+}
+
+.share-icon-wrapper {
+	background-color: #004626;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 12px;
+}
+
+/* Bottom sheet styles */
+/* Bottom sheet styles */
+.bottom-sheet {
+	position: fixed;
+	bottom: -100%;
+	left: 0;
+	right: 0;
+	background-color: white;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	transition: bottom 0.3s ease-in-out;
+	z-index: 1000;
+	box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+	max-height: 80vh;
+	overflow-y: auto;
+	padding-bottom: 20px;
+}
+
+.bottom-sheet.show {
+	bottom: 0;
+}
+
+.bottom-sheet-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 999;
+}
+
+.bottom-sheet-header {
+	padding: 20px 20px 10px 20px;
+}
+
+.sheet-header-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.icon-and-text {
+	display: flex;
+	align-items: center;
+}
+
+.share-icon-wrapper {
+	background-color: #004626;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 12px;
+}
+
+.share-title {
+	font-size: 16px;
+	font-weight: 600;
+	color: #000;
+}
+
+.share-subtitle {
+	font-size: 14px;
+	color: #888;
+}
+
+.close-button {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 5px;
+	z-index: 10;
+}
+
+/* Social icons container */
+.social-icons-container {
+	display: flex;
+	justify-content: space-between;
+	gap: 8px;
+	padding: 0 0 20px 0;
+}
+
+.social-icon {
+	width: 50px;
+	height: 50px;
+	border-radius: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: transform 0.2s;
+}
+
+.social-icon:hover {
+	transform: scale(1.05);
+}
+
+.social-icon i {
+	color: white;
+	font-size: 20px;
+}
+
+/* Swiper styles */
+.swiper-container {
+	position: relative;
+	padding: 0 20px 20px 20px;
+	overflow: visible;
+}
+
+.swiper-navigation-buttons {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	z-index: 10;
+	margin-bottom: 10px;
+}
+
+.carousel-btn {
+	background-color: #004626;
+	color: white;
+	border: none;
+	border-radius: 50%;
+	width: 36px;
+	height: 36px;
+	cursor: pointer;
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.carousel-btn.left {
+	margin-right: auto;
+}
+
+.carousel-btn.right {
+	margin-left: auto;
+}
+
+.carousel-btn:hover {
+	background-color: #005d33;
+}
+
+/* Swiper specific styles */
+.mySwiper {
+	width: 50%;
+	padding: 30px 0;
+	overflow: visible !important;
+}
+
+.swiper-slides {
+	background-position: center;
+	background-size: cover;
+	width: 300px;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	transition: all 0.3s ease;
+}
+
+.carousel-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 12px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Fix for PrimeReact Image component */
+.carousel-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 12px;
+}
+
+/* Make non-active slides blurry and active slide clear */
+.swiper-slide-prev .carousel-image img,
+.swiper-slide-next .carousel-image img {
+	filter: blur(2px);
+	opacity: 0.7;
+	transition: all 0.3s ease;
+}
+
+.swiper-slide-active .carousel-image img {
+	filter: blur(0) !important;
+	opacity: 1 !important;
+	transform: scale(1.05);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+	transition: all 0.3s ease;
+}
+
+/* Ensure the active slide has proper z-index */
+.swiper-slide-active {
+	z-index: 2;
+}
+
+/* Adjust the slide sizing for better coverflow effect */
+.carousel-slide {
+	width: 300px;
+	height: 200px;
+	transition: all 0.3s ease;
+}
+
+/* Override any PrimeReact styles that might cause blur */
+/* Assuming parent container has fixed height */
+.p-image {
+	height: 232px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.p-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.swiper-slide-active .p-image img {
+	filter: none !important;
+	transform: none !important;
+}
+.pi-heart {
+	position: absolute !important;
+	z-index: 999;
+	right: 18px;
+	top: 10px;
+	color: white !important;
+	font-size: larger !important;
+}
+
+.heart-icon {
+	color: #ffa530 !important;
+	position: absolute;
+	font-size: larger;
+	z-index: 999;
+	right: 18px;
+	top: 10px;
+}
+
+.custom-dialog .p-dialog-content {
+	background: #f2f0ef;
+	color: #495057;
+	padding: 0.3rem;
+	border-radius: 0.9%;
+}
+.swiper-button-next,
+.swiper-button-prev {
+	position: absolute;
+	top: 50%;
+	width: 44px;
+	height: 44px;
+	margin-top: -22px;
+	z-index: 10;
+	cursor: pointer;
+	background-size: 44px 44px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.swiper-button-next {
+	right: 10px;
+	left: auto;
+}
+
+.swiper-button-prev {
+	left: 10px;
+	right: auto;
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+	opacity: 0.35;
+	cursor: auto;
+	pointer-events: none;
+}
+
+/* Ensure navigation is visible in Firefox */
+.full-width-swiper .swiper-button-next:after,
+.full-width-swiper .swiper-button-prev:after {
+	font-size: 24px;
+	color: #004626;
+	font-weight: bold;
+}
+
+/* Default Swiper navigation arrows */
+.swiper-button-next:after,
+.swiper-button-prev:after {
+	font-family: swiper-icons;
+	font-size: 24px;
+	text-transform: none !important;
+	letter-spacing: 0;
+	text-transform: none;
+	font-variant: initial;
+	line-height: 1;
+	color: #004626;
+}
+
+.swiper-button-prev:after {
+	content: "prev";
+}
+
+.swiper-button-next:after {
+	content: "next";
+}
+
+/* Ensure navigation works with your existing layout */
+.full-width-swiper {
+	position: relative;
+}
+
+.swiper-container-wrapper {
+	position: relative;
+}

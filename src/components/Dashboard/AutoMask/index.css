@@ -1,0 +1,94 @@
+html,
+body {
+	margin: 0px !important;
+	overflow-y: hidden !important;
+}
+
+.custom-border {
+	border-left: none !important;
+	border-right: none !important;
+	border-top: 1px solid #ececec; /* or your desired color */
+	border-bottom: 1px solid #ececec;
+	border-radius: 0;
+	background-color: linear-gradient(
+		0deg,
+		rgba(255, 255, 255, 0) 50%,
+		#fff 46.21%
+	);
+}
+
+.undo-color {
+	background-color: #ffa530;
+	border: none;
+	width: 50px;
+	height: 40px;
+}
+
+.redo-color {
+	background-color: #ffa530;
+	border: none;
+	width: 50px;
+	height: 40px;
+	margin-left: 5px;
+}
+
+.toggle-container {
+	display: inline-flex;
+	border: 1px solid #ccc;
+	border-radius: 9999px;
+	overflow: hidden;
+	background-color: #fff;
+	max-width: 100%;
+}
+
+.toggle-option {
+	padding: 10px 20px;
+	border: none;
+	background-color: transparent;
+	color: #f7931e;
+	font-weight: 500;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	transition:
+		background-color 0.3s,
+		color 0.3s;
+	font-size: 14px;
+	white-space: nowrap;
+	flex: 1;
+}
+
+.toggle-option:first-child {
+	border-top-left-radius: 9999px;
+	border-bottom-left-radius: 9999px;
+}
+
+.toggle-option:last-child {
+	border-top-right-radius: 9999px;
+	border-bottom-right-radius: 9999px;
+}
+
+.toggle-option.active {
+	background-color: #f7931e;
+	color: white;
+}
+
+.icon {
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+}
+
+.preview-images {
+	border-radius: 20px;
+}
+
+.mask-overlay {
+	mix-blend-mode: multiply;
+	opacity: 2;
+	pointer-events: none;
+	filter: brightness(0) saturate(100%) invert(70%) sepia(30%) saturate(600%)
+		hue-rotate(75deg) brightness(90%) contrast(85%);
+}

@@ -1,0 +1,92 @@
+html,
+body {
+	overflow-y: auto !important;
+}
+
+.signup-form {
+	width: 100%;
+}
+
+.form-row {
+	display: flex;
+	gap: 1rem;
+}
+
+.form-group {
+	flex: 1;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.PhoneInputInput {
+	border-radius: 999px;
+	padding: 0.75rem 1.25rem !important;
+	border: 1px solid lightgrey;
+}
+
+.p-inputtext-rounded {
+	border-radius: 9999px !important;
+	padding: 0.75rem 1.25rem;
+	font-size: 0.95rem;
+}
+
+.form-checkbox-signup {
+	display: flex;
+	flex-direction: column; /* allows checkbox line + error line vertically */
+	align-items: flex-start;
+	margin-bottom: 1.5rem;
+	text-align: center;
+}
+
+.checkbox-line {
+	display: flex-start;
+	align-items: flex-start;
+}
+
+.submit-btn {
+	background-color: #ff9c3e;
+	border: none;
+	border-radius: 9999px;
+	width: 100%;
+	padding: 0.75rem;
+	font-weight: bold;
+	color: white;
+}
+
+.p-dropdown-rounded {
+	width: 100% !important;
+	border-radius: 9999px !important;
+	padding: 0.4rem 1rem;
+	font-size: 0.95rem;
+}
+
+.p-password-input {
+	border-radius: 9999px !important;
+	padding: 0.75rem 1.25rem !important;
+	font-size: 0.95rem;
+}
+
+.p-icon-field {
+	width: 100% !important;
+}
+
+.p-password-input {
+	width: 100% !important;
+}
+
+.custom-input-signup:hover,
+.custom-input-signup:focus {
+	outline: none;
+	border: 1px solid #ffa530;
+	box-shadow: 0 0 0 0.2rem rgba(255, 165, 48, 0.3);
+}
+
+/* Hover and focus color for password input */
+.custom-password-input-signup:hover,
+.custom-password-input-signup:focus {
+	outline: none;
+	border: 1px solid #ffa530;
+	box-shadow: 0 0 0 0.2rem rgba(255, 165, 48, 0.3);
+}

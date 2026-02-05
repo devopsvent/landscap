@@ -1,0 +1,71 @@
+.user-profile {
+	z-index: 999;
+	position: absolute;
+}
+
+.p-card {
+	border-radius: 12px;
+	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.p-card .p-card-content {
+	padding: 1.5rem;
+}
+
+.p-tabview .p-tabview-nav {
+	border-width: 0 0 1px 0;
+}
+
+.p-tabview .p-tabview-nav li .p-tabview-nav-link {
+	border: none;
+	color: var(--text-color-secondary);
+	transition: all 0.2s;
+}
+
+.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+	border-color: var(--primary-color);
+	color: var(--primary-color);
+}
+
+.full-width {
+	width: 100%;
+}
+
+.p-inputtext-rounded {
+	border-radius: 9999px !important;
+	padding: 0.75rem 1.25rem !important;
+	font-size: 0.95rem;
+}
+
+.p-dropdown-rounded {
+	width: 100% !important;
+	border-radius: 9999px !important;
+	padding: 0.4rem 1rem;
+	font-size: 0.95rem;
+}
+.submit-btn {
+	background-color: #ff9c3e;
+	border: none;
+	border-radius: 9999px;
+	width: 100%;
+	padding: 0.75rem;
+	font-weight: bold;
+	color: white;
+	margin-top: 15px;
+}
+
+.profile-image {
+	margin-top: -14px;
+	margin-bottom: 5px;
+}
+
+.edit-profile-image {
+	margin-top: -24px;
+	margin-bottom: 15px;
+}
+
+.p-avatar.p-avatar-xl {
+	width: 8rem !important;
+	height: 8rem !important;
+	font-size: 4rem;
+}

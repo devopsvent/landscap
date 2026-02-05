@@ -1,0 +1,145 @@
+/* Bottom Sheet Styles */
+.bottom-sheet-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 999;
+}
+
+.bottom-sheet {
+	position: fixed;
+	bottom: -100%;
+	left: 0;
+	right: 0;
+	background-color: white;
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
+	z-index: 1000;
+	transition: bottom 0.3s ease-in-out;
+	max-height: 80vh;
+	overflow-y: auto;
+}
+
+.bottom-sheet.show {
+	bottom: 0;
+}
+
+.close-button {
+	position: absolute;
+	top: 16px;
+	right: 16px;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+.bottom-sheet-header {
+	padding: 16px;
+}
+
+.sheet-header-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 16px;
+}
+
+.icon-and-text {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.share-icon-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: #004626;
+}
+
+.share-title {
+	font-weight: 600;
+	font-size: 18px;
+}
+
+.share-subtitle {
+	color: #666;
+	font-size: 14px;
+}
+
+.social-icons-container {
+	display: flex;
+	gap: 16px;
+	flex-wrap: wrap;
+	margin-top: 16px;
+}
+
+.social-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	color: white;
+	cursor: pointer;
+}
+
+/* Image Grid Styles */
+.image-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 16px;
+}
+
+.image-container {
+	position: relative;
+	border-radius: 8px;
+	overflow: hidden;
+	cursor: pointer;
+	border: 2px solid transparent;
+	transition: all 0.2s ease;
+}
+
+.image-container.selected {
+	border: 2px solid #ffa500;
+	border-radius: 8px;
+}
+
+.gallery-image {
+	width: 100%;
+	height: 90%;
+	object-fit: cover;
+}
+
+/* Selection Indicator Styles - Centered orange circle with checkmark */
+.selection-indicator {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	background-color: #ffa500; /* Orange background */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.selection-indicator i {
+	color: white;
+	font-size: 24px;
+}
+
+.preview-image {
+	height: 35vh !important;
+	object-fit: contain !important;
+}

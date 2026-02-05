@@ -1,0 +1,58 @@
+/* globals.css */
+html,
+body {
+	margin: 0px !important;
+	overflow-y: auto;
+}
+
+body {
+	color: var(--foreground);
+	background: var(--background);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* globals.css */
+/* Apply the font to all PrimeReact components */
+.p-component,
+.p-button,
+.p-inputtext,
+.p-dropdown,
+.p-calendar,
+.p-multiselect,
+.p-datatable,
+.p-dialog,
+.p-toast,
+.p-accordion,
+.p-accordion-header,
+.p-accordion-content {
+	font-family: inherit !important;
+}
+
+.p-card {
+	box-shadow: none;
+}
+
+.p-card .p-card-body {
+	padding: 0 !important;
+}
+
+.p-rating-icon {
+	color: #ffcf14 !important;
+}
+
+html {
+	font-family: var(--font-dosis);
+}
+
+@media (min-width: 1200px) and (max-width: 1600px) {
+	.left-63 {
+		left: 66% !important;
+	}
+}
+
+@media (min-width: 1601px) {
+	.left-75 {
+		left: 73% !important;
+	}
+}

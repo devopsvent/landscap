@@ -1,0 +1,267 @@
+html,
+body {
+	margin: 0px !important;
+	overflow-y: hidden !important;
+}
+
+.custom-border {
+	border-bottom: 1px solid #e5e7eb;
+	border-top: 1px solid #e5e7eb;
+	padding-top: 0.1rem;
+	padding-bottom: 0.1rem;
+}
+
+.submit-btn {
+	background-color: #ff9c3e;
+	border: none;
+	border-radius: 9999px;
+	width: 100%;
+	padding: 0.75rem;
+	font-weight: bold;
+	color: white;
+}
+
+.bg-orange {
+	background-color: #ffa530;
+	border-radius: 35px;
+	width: 255px;
+}
+
+.bg-pinkIcon {
+	background-color: #ffa530;
+	border-radius: 35px;
+}
+
+.bg-orange1 {
+	background-color: #ffa530;
+	border-radius: 35px;
+	width: 295px;
+}
+
+.dash-container {
+	background-color: #f8fffc !important;
+}
+
+.dash-sidebar-container {
+	background-color: #004626;
+	border-radius: 0px 0px 0px 95px;
+	height: 100vh !important;
+	overflow: hidden;
+}
+
+.bottom-wave {
+	bottom: -5px;
+	margin-left: 38px;
+	position: absolute;
+}
+
+.top-wave {
+	top: -0.5px;
+	margin-left: 46px;
+	position: absolute;
+}
+
+.logout-button {
+	margin-bottom: 20px;
+}
+
+.searchbar-container {
+	width: 90vw !important;
+}
+.searchbar-input {
+	width: 97% !important;
+}
+
+.text-orange-400 {
+	color: #ffa530 !important;
+}
+
+.p-inputtext-rounded {
+	border-radius: 9999px !important;
+	padding: 0.75rem 1.25rem;
+	font-size: 0.95rem;
+	border: 1px solid #bbb !important;
+}
+
+.full-width {
+	width: 100% !important;
+}
+
+.pi-search {
+	left: 20px !important;
+}
+.pi-pin {
+	left: 20px !important;
+}
+
+.right-2 {
+	right: 60px !important;
+}
+
+.bottom-2 {
+	bottom: 20px !important;
+}
+
+.upload-box {
+	background-color: #f8fffc;
+	border-radius: 25px;
+	padding: 65px;
+	border: 1px solid #bbb !important;
+	align-items: center !important;
+	justify-content: center !important;
+}
+
+.preview-image {
+	display: block;
+	max-width: 100%;
+	width: auto;
+	height: 64vh;
+	object-fit: contain;
+	border-radius: 25px;
+	margin-top: 30px !important;
+	margin-bottom: 50px !important;
+}
+
+.preview-image-main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.home-dashboard-container {
+	height: auto !important;
+}
+.upload-text {
+	color: #606467 !important;
+}
+.upload-icon {
+	color: #606467 !important;
+	font-size: 2rem !important;
+}
+.logout-button {
+	z-index: 999;
+	background-color: transparent;
+	border: none;
+	font-size: large;
+}
+
+.pi-bell {
+	color: #ffa530 !important;
+	margin-top: 0px;
+	font-size: larger;
+}
+
+.sample-image {
+	border-radius: 15px;
+	margin-left: 10px;
+}
+
+.css-13cymwt-control {
+	border-radius: 25px !important;
+	padding: 5px !important;
+}
+
+.css-t3ipsp-control {
+	border-radius: 25px !important;
+	padding: 5px !important;
+}
+
+.avatar {
+	display: flex;
+	justify-content: end;
+	align-items: end;
+	position: sticky;
+}
+
+/* Fullscreen overlay */
+.loader-overlay-automask {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 9999;
+}
+
+/* Spinner wrapper */
+.loader-wrapper-automask {
+	width: 150px;
+	height: 150px;
+	position: relative;
+}
+
+/* Rotating spinner */
+.spinner {
+	width: 100%;
+	height: 100%;
+	border: 5px solid #f3f3f3;
+	border-top: 5px solid #ffa530;
+	border-radius: 50%;
+	animation: spin 1s linear infinite;
+	background-color: white;
+}
+
+/* Centered image - does not rotate */
+.loader-image-automask {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	object-fit: cover;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	pointer-events: none; /* optional, lets clicks pass through */
+	background-color: white;
+}
+
+/* Spin animation */
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	.custom-border {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.custom-border h2 {
+		margin-bottom: 0.5rem;
+	}
+}
+
+.custom-menu-item {
+	transition:
+		transform 0.2s ease,
+		background-color 0.2s ease,
+		color 0.2s ease;
+	margin-bottom: 4px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 8px;
+	width: 80%;
+}
+
+.custom-menu-item:hover {
+	transform: scale(1.2);
+	background-color: #ffa530 !important;
+	color: white !important;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.custom-overlaypanel .p-overlaypanel-content {
+	padding: 0 !important;
+}

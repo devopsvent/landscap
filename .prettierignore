@@ -1,0 +1,11 @@
+ node_modules
+ .next
+ .husky
+ .prettierignore
+ .stylelintignore
+ stories
+ storybook-static
+ playwright-report
+ .nyc_output
+ test-results
+ junit.xml

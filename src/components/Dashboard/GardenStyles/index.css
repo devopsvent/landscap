@@ -1,0 +1,284 @@
+/* Custom styles for AutoMaskGallery component */
+.home-container {
+	min-height: 100vh;
+	position: relative;
+	padding-bottom: 60px;
+}
+
+.custom-border {
+	border-bottom: 1px solid #e5e7eb;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.p-inputtext-rounded {
+	border-radius: 9999px !important;
+	padding: 0.75rem 1.25rem !important;
+	font-size: 0.95rem;
+}
+
+.bg-orange {
+	background-color: #ffa530 !important;
+}
+
+.text-orange-400 {
+	color: #ffa530;
+}
+
+.text-orange-500 {
+	color: #f97316;
+}
+
+.bg-orange-100 {
+	background-color: #ffedd5;
+}
+
+/* PrimeReact Card customization */
+.garden-card-style {
+	box-shadow:
+		0 4px 6px -1px rgba(0, 0, 0, 0.1),
+		0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+	border-radius: 1.5rem !important;
+	overflow: hidden !important;
+	height: 100% !important;
+	transition: transform 0.2s ease-in-out;
+	width: 95%;
+}
+
+.garden-card-style:hover {
+	transform: translateY(-5px);
+}
+
+.garden-card-style .p-card-body {
+	padding: 1rem !important;
+}
+
+.garden-card-style .p-card-content {
+	padding: 0 !important;
+}
+
+.garden-image {
+	transition: transform 0.3s ease;
+	width: 100%;
+	height: 350px;
+	object-fit: cover;
+}
+
+.garden-card-style:hover .garden-image {
+	transform: scale(1.05);
+}
+
+.dimensions-badge {
+	font-size: 0.75rem;
+	font-weight: 500;
+}
+
+/* Selected card styles */
+.selected-card {
+	border: 2px solid #ffa530 !important;
+}
+
+.selected-image {
+	opacity: 1;
+}
+
+.selected-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.checkmark-icon {
+	background-color: #ffa530;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Floating Re-Imagine button */
+.reimagine-button-container {
+	position: sticky;
+	top: 850px;
+	z-index: 100;
+	display: flex;
+	justify-content: center;
+	/* margin-bottom: 20px; */
+}
+
+/* Bottom Sheet styles */
+.bottom-sheet-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 998;
+}
+
+.bottom-sheet {
+	position: fixed;
+	bottom: -100%;
+	left: 0;
+	right: 0;
+	background-color: white;
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
+	z-index: 999;
+	box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+	transition: bottom 0.3s ease-in-out;
+	max-height: 80vh;
+	overflow-y: auto;
+}
+
+.bottom-sheet.show {
+	bottom: 0;
+}
+
+.bottom-sheet-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 1.5rem;
+	border-bottom: 1px solid #e5e7eb;
+}
+
+.bottom-sheet-content {
+	padding: 1.5rem;
+}
+
+.bottom-sheet-footer {
+	padding: 1rem 1.5rem;
+	border-top: 1px solid #e5e7eb;
+	z-index: 999;
+}
+
+.close-button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	font-size: 1.25rem;
+	color: #6b7280;
+}
+
+/* Line clamp for description text */
+.line-clamp-3 {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+.state {
+	margin-left: 40px;
+	color: #c1c1c1;
+}
+
+.pi-cog {
+	font-size: larger;
+}
+
+/* Fullscreen overlay */
+.loader-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 9999;
+}
+
+/* Spinner wrapper */
+.loader-wrapper {
+	width: 150px;
+	height: 150px;
+	position: relative;
+}
+
+/* Rotating spinner */
+.spinner {
+	width: 100%;
+	height: 100%;
+	border: 5px solid #f3f3f3;
+	border-top: 5px solid #ffa530;
+	border-radius: 50%;
+	animation: spin 1s linear infinite;
+	background-color: white;
+}
+
+/* Centered image - does not rotate */
+.loader-image {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	object-fit: cover;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	pointer-events: none; /* optional, lets clicks pass through */
+	background-color: white;
+}
+
+.custom-input:hover,
+.custom-input:focus,
+.custom-password-input:hover,
+.custom-password-input:focus {
+	outline: none;
+	border: 1px solid #ffa530;
+	box-shadow: 0 0 0 0.2rem rgba(255, 165, 48, 0.3);
+}
+
+/* Spin animation */
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	.custom-border {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.custom-border h2 {
+		margin-bottom: 0.5rem;
+	}
+}
+
+/* Custom square tooltip styling */
+.custom-square-tooltip .p-tooltip-text {
+	background: #2d3748 !important;
+	color: white !important;
+	padding: 12px !important;
+	border-radius: 0 !important;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+	border: 1px solid #4a5568 !important;
+	max-width: 300px;
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+/* Hide default arrow */
+.custom-square-tooltip .p-tooltip-arrow {
+	display: none !important;
+}

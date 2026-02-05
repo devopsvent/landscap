@@ -1,0 +1,74 @@
+.signin-form {
+	width: 100%;
+}
+
+.form-row {
+	display: flex;
+	gap: 1rem;
+}
+
+.form-group {
+	flex: 1;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.p-inputtext-rounded {
+	border-radius: 9999px !important;
+	padding: 0.75rem 1.25rem !important;
+	font-size: 0.95rem;
+}
+
+.p-password-input {
+	border-radius: 9999px !important;
+	padding: 0.75rem 1.25rem !important;
+	font-size: 0.95rem;
+}
+
+.form-checkbox {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1.5rem;
+}
+
+.submit-btn {
+	background-color: #ff9c3e;
+	border: none;
+	border-radius: 9999px;
+	width: 100%;
+	padding: 0.75rem;
+	font-weight: bold;
+	color: white;
+}
+.p-dropdown-rounded {
+	width: 100% !important;
+	border-radius: 9999px !important;
+	padding: 0.4rem 1rem;
+	font-size: 0.95rem;
+}
+.p-icon-field {
+	width: 100% !important;
+}
+.p-password-input {
+	width: 100% !important;
+}
+
+/* For both InputText and Password */
+.custom-input:hover,
+.custom-input:focus,
+.custom-password-input:hover,
+.custom-password-input:focus {
+	outline: none;
+	border: 1px solid #ffa530;
+	box-shadow: 0 0 0 0.2rem rgba(255, 165, 48, 0.3);
+}
+
+/* Hover and focus color for password input */
+.custom-password-input:hover,
+.custom-password-input:focus {
+	outline: none;
+	border: 1px solid #ffa530;
+	box-shadow: 0 0 0 0.2rem rgba(255, 165, 48, 0.3);
+}
